@@ -16,7 +16,7 @@ function Header() {
                 ></img>
             </div>
             <AppBar position="BOTTOM" sx={{height: 50, background: "#b4b4b4"}}>
-                <Toolbar>
+                <Toolbar sx={{borderColor: 'divider'}}>
                     <Tabs>
                         <Tab label={Pages[0]} />
                         <Tab label={Pages[1]} />
@@ -25,6 +25,7 @@ function Header() {
                         <Tab label={Pages[4]} />
                     </Tabs>
                 </Toolbar>
+                
             </AppBar>
         </React.Fragment>
     )
@@ -33,11 +34,3 @@ function Header() {
 // BOTTOM: Place it on the Bottom of this element
 // sx = style
 export default Header
-
-
-{/* <div className="Header">
-                <h1> Light Weight MPC </h1>
-                <img src={logo} alt='Equinor logo'
-                    style={ImageStyle}
-                ></img>
-            </div> */}
