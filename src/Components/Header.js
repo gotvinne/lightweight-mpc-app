@@ -16,30 +16,23 @@ interface TabPanelProps { // Struct
 function TabPanel(props: TabPanelProps) {
 const { children, value, index, ...other } = props;
 
-return (
+return ( // Render a new object based on value
     <div role="tabpanel" hidden={value !== index} id={`simple-tabpanel-${index}`}
-    aria-labelledby={`simple-tab-${index}`}
+    aria-labelledby={`simple-tab-${index}`} 
     {...other}
     >
     {value === index && (
       <Box sx={{ p: 3 }}>
-        <Typography>{children}</Typography>
+      <Typography>{children}</Typography>
       </Box>
     )}
     </div>
 );
 }
 
-function a11yProps(index: number) {
-    return {
-      id: `simple-tab-${index}`,
-      'aria-controls': `simple-tabpanel-${index}`,
-    };
-  }
-
 function Header() {
     const [value, setValue] = React.useState(0); // Set initial value
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    const handleChange = (event: React.SyntheticEvent, newValue: number) => { // Handle callback
         setValue(newValue);
     };
     
@@ -58,29 +51,29 @@ function Header() {
                             '& .MuiTab-root': { color: "#212121" },
                             '& .Mui-selected': { color: "#212121" },
                         }}>
-                        <Tab label={Pages[0]} {...a11yProps(0)} />
-                        <Tab label={Pages[1]} {...a11yProps(1)}/>
-                        <Tab label={Pages[2]} {...a11yProps(2)}/>
-                        <Tab label={Pages[3]} {...a11yProps(3)}/>
-                        <Tab label={Pages[4]} {...a11yProps(4)} />
+                        <Tab label={Pages[0]} />
+                        <Tab label={Pages[1]} />
+                        <Tab label={Pages[2]} />
+                        <Tab label={Pages[3]} />
+                        <Tab label={Pages[4]} />
                     </Tabs>
                 </Toolbar>
-                <TabPanel value={value} index={0}>
-                    Item One
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                    Item Two
-                </TabPanel>
-                <TabPanel value={value} index={2}>
-                    Item Three
-                </TabPanel>
-                <TabPanel value={value} index={3}>
-                    Item One
-                </TabPanel>
-                <TabPanel value={value} index={4}>
-                    Item Two
-                </TabPanel>
             </AppBar>
+            <TabPanel value={value} index={0}>
+                Wiiiii
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+                Item Two
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+                Item Three
+            </TabPanel>
+            <TabPanel value={value} index={3}>
+                Item One
+            </TabPanel>
+            <TabPanel value={value} index={4}>
+                Item Two
+            </TabPanel>
         </React.Fragment>
     )
 }
