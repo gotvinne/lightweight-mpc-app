@@ -11,7 +11,7 @@ const Formulas = [`\\leq \\Delta U \\leq`, `\\leq U \\leq`, `\\leq Y \\leq`];
 
 export default function Scenario() {
     return (
-        <Box sx={{ width: "100%", pt: 3, pl: "3%" }}>
+        <Box sx={{ width: "100%", pt: 3, pl: "2%" }}>
             <Box sx={{pt: 2, display: "flex", flexDirection: "row"}}>
                 <TextField id="system" label={Buttons[0]} variant="outlined" helperText={DataTypes[2]} />
                 <TextField id="system" label={Buttons[9]} variant="outlined" helperText={DataTypes[2]} />
