@@ -1,13 +1,15 @@
 import React from "react";
 import { AppBar, Tab, Tabs, Toolbar, Typography, Box } from "@mui/material";
 
+// Components
 import About from "./About";
+import Scenario from "./Scenario";
 
 import '../css/Header.css'
 import logo from '../img/equinor_logo.jpg'
 
 const ImageStyle = {height: "75px", width: "75px", transform: "translate(750px, 18px)"}  
-const Pages = ["Simulation", "Results", "Algorithm", "Models", "about"];
+const Pages = ["Scenario", "Simulation", "Algorithm", "Models", "about"];
 
 interface TabPanelProps { // Struct
     children?: React.ReactNode;
@@ -58,12 +60,10 @@ function Header() {
                 </Toolbar>
             </AppBar>
             <TabPanel value={value} index={0}>
-                <Box sx={{ width: "100%", pt: 2, pl: 2 }}>
-                    <Typography> Anders Olav </Typography>
-                </Box>
+                <Scenario/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-            <   Box sx={{ width: "100%", pt: 2, pl: 2 }}>
+                <Box sx={{ width: "100%", pt: 2, pl: 2 }}>
                 <Typography> Marie Eline </Typography>
                 </Box>
             </TabPanel>
