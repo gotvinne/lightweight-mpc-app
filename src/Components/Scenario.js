@@ -5,7 +5,7 @@ import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
 
 const DataTypes = ["double", "vector<double>", "String", "int"];
-const Buttons = ["System name", "Prediction horizon, P", "Control Horizon, M", "Time delay, W", "Q", "R", "RoH", "RoL", "T"];
+const Buttons = ["System name", "Prediction horizon, P", "Control Horizon, M", "Time delay, W", "Q", "R", "RoH", "RoL", "T", "Simulation name"];
 const Constraints = ["Lower", "Upper"];
 const Formulas = [`\\leq \\Delta U \\leq`, `\\leq U \\leq`, `\\leq Y \\leq`];
 
@@ -14,7 +14,7 @@ export default function Scenario() {
         <Box sx={{ width: "100%", pt: 3, pl: "3%" }}>
             <Box sx={{pt: 2, display: "flex", flexDirection: "row"}}>
                 <TextField id="system" label={Buttons[0]} variant="outlined" helperText={DataTypes[2]} />
-                <TextField id="system" label={Buttons[0]} variant="outlined" helperText={DataTypes[2]} />
+                <TextField id="system" label={Buttons[9]} variant="outlined" helperText={DataTypes[2]} />
                 <Box sx={{pl: 2}}/>
                 <TextField id="T" label={Buttons[8]} variant="outlined" helperText={DataTypes[3]} />
                 <Box sx={{pl: "2%"}}/>
