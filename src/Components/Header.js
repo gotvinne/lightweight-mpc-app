@@ -1,6 +1,8 @@
 import React from "react";
 import { AppBar, Tab, Tabs, Toolbar, Typography, Box } from "@mui/material";
 
+import About from "./About";
+
 import '../css/Header.css'
 import logo from '../img/equinor_logo.jpg'
 
@@ -16,16 +18,12 @@ interface TabPanelProps { // Struct
 function TabPanel(props: TabPanelProps) {
 const { children, value, index, ...other } = props;
 
-return ( // Render a new object based on value
+return ( // Render react node based on value
     <div role="tabpanel" hidden={value !== index} id={`simple-tabpanel-${index}`}
     aria-labelledby={`simple-tab-${index}`} 
     {...other}
-    >
-    {value === index && (
-      <Box sx={{ p: 3 }}>
-      <Typography>{children}</Typography>
-      </Box>
-    )}
+    > 
+    {value === index && ( children )} 
     </div>
 );
 }
@@ -60,19 +58,27 @@ function Header() {
                 </Toolbar>
             </AppBar>
             <TabPanel value={value} index={0}>
-                Wiiiii
+                <Box sx={{ width: "100%", pt: 2, pl: 2 }}>
+                    <Typography> Anders Olav </Typography>
+                </Box>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Item Two
+            <   Box sx={{ width: "100%", pt: 2, pl: 2 }}>
+                <Typography> Marie Eline </Typography>
+                </Box>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Item Three
+                <Box sx={{ width: "100%", pt: 2, pl: 2 }}>
+                    <Typography> Grete POWPOW </Typography>
+                </Box>
             </TabPanel>
             <TabPanel value={value} index={3}>
-                Item One
+                <Box sx={{ width: "100%", pt: 2, pl: 2 }}>
+                    <Typography> Hei </Typography>
+                </Box>
             </TabPanel>
             <TabPanel value={value} index={4}>
-                Item Two
+                <About/>
             </TabPanel>
         </React.Fragment>
     )
