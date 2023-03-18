@@ -146,7 +146,7 @@ dist
 **/*.backup.*
 **/*.back.*
 
-node_modules/.cache/*
+node_modules/.cache/default-developement/*
 
 *.sublime*
 
