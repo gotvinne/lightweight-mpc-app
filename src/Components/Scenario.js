@@ -11,24 +11,30 @@ const Formulas = [`\\leq \\Delta U \\leq`, `\\leq U \\leq`, `\\leq Y \\leq`];
 
 export default function Scenario() {
     return (
-        <Box sx={{ width: "100%", pt: 5, pl: 5 }}>
+        <Box sx={{ width: "100%", pt: 3, pl: "3%" }}>
             <Box sx={{pt: 2, display: "flex", flexDirection: "row"}}>
                 <TextField id="system" label={Buttons[0]} variant="outlined" helperText={DataTypes[2]} />
+                <TextField id="system" label={Buttons[0]} variant="outlined" helperText={DataTypes[2]} />
+                <Box sx={{pl: 2}}/>
                 <TextField id="T" label={Buttons[8]} variant="outlined" helperText={DataTypes[3]} />
-                <Box sx={{pl: "60%"}}/>
-                <Button variant="contained" size="large" color="success"> RUN SIMULATION</Button>
+                <Box sx={{pl: "2%"}}/>
+                <Button variant="contained" size="large" color="success">RUN SIMULATION</Button>
             </Box>
-            
-            <Box sx={{pt: 2, display: "flex", flexDirection: "row"}}>
-                <Box>
-                    <Typography variant="h5" sx={{fontWeight: 'bold'}}> Model Predictive Controller: </Typography>
-                    <Box sx={{pt:2}}/>
+
+            <Box sx={{pl: "13%", pt: 2}}>
+                <Typography variant="h5" sx={{fontWeight: 'bold'}}> Model Predictive Controller: </Typography>
+            </Box>
+           
+            <Box sx={{pl: 6, pt: 2, display: "flex", flexDirection: "row"}}>
+                <Box sx ={{pt:2, pl: 10}}>
                     <TextField id="p" label={Buttons[1]} variant="outlined" helperText={DataTypes[0]}/>
                     <Box />
                     <TextField id="m" label={Buttons[2]} variant="outlined" helperText={DataTypes[0]}/>
                     <Box />
                     <TextField id="w" label={Buttons[3]} variant="outlined" helperText={DataTypes[0]}/>
-                    <Box sx={{height: 30}}/>
+                </Box>
+
+                <Box sx={{pt:2, pl: 5}}>
                     <TextField id="q" label={Buttons[4]} variant="outlined" helperText={DataTypes[1]}/>
                     <Box />
                     <TextField id="R" label={Buttons[5]} variant="outlined" helperText={DataTypes[1]}/>
@@ -37,7 +43,9 @@ export default function Scenario() {
                     <Box />
                     <TextField id="rol" label={Buttons[7]} variant="outlined" helperText={DataTypes[0]}/>
                 </Box>
+            </Box>
 
+            <Box sx={{pt: 2, display: "flex", flexDirection: "row"}}>
                 <Box sx ={{pt:6, pl: 10}}>
                     <TextField id="p" label={Constraints[0]} variant="outlined" helperText={DataTypes[0]}/>
                     <Box />
