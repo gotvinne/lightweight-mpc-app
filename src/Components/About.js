@@ -17,9 +17,7 @@ export default function About() {
       </Typography>
       <Typography variant="body1" align="center" gutterBottom>
         Supervisors:
-        Prof. Lars Struen Imsland (ITK),
-        Dr. Gisle Otto Eikrem (Equinor)
-
+        Prof. Lars Struen Imsland & Dr. Gisle Otto Eikrem
       </Typography>
     </Box>
   );
