@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Light Weight MPC APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```console
+nvm install 
+
+npx create-react-app
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+npm i react-katex --force
+```
+
 
 ## Available Scripts
 
