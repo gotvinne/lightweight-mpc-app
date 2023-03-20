@@ -5,7 +5,7 @@ import 'katex/dist/katex.min.css';
 import { BlockMath } from 'react-katex';
 
 const DataTypes = ["double", "vector<double>", "String", "int"];
-const Buttons = ["System name", "Prediction horizon, P", "Control Horizon, M", "Time delay, W", "Q", "R", "RoH", "RoL", "T", "Simulation name"];
+const Buttons = ["System name", "Prediction horizon, P", "Control Horizon, M", "Time delay, W", "Q", "R", "RoH", "RoL", "T", "Scenario name"];
 const Constraints = ["Lower", "Upper"];
 const Formulas = [`\\leq \\Delta U \\leq`, `\\leq U \\leq`, `\\leq Y \\leq`];
 
