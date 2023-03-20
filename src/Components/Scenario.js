@@ -21,7 +21,7 @@ export default function Scenario() {
                 <Button variant="contained" size="large" color="success">RUN SIMULATION</Button>
             </Box>
 
-            <Box sx={{pl: "13%", pt: 2}}>
+            <Box align="left" sx={{pl: 30, pt: 2}}>
                 <Typography variant="h5" sx={{fontWeight: 'bold'}}> Model Predictive Controller: </Typography>
             </Box>
            

@@ -4,11 +4,12 @@ import { AppBar, Tab, Tabs, Toolbar, Typography, Box } from "@mui/material";
 // Components
 import About from "./About";
 import Scenario from "./Scenario";
+import Algorithm from "./Algorithm";
 
 import '../css/Header.css'
 import logo from '../img/equinor_logo.jpg'
 
-const ImageStyle = {height: "75px", width: "75px", transform: "translate(750px, 18px)"}  
+const ImageStyle = {height: "75px", width: "75px", transform: "translate(725px, 18px)"}  
 const Pages = ["Scenario", "Simulation", "Algorithm", "Models", "about"];
 
 interface TabPanelProps { // Struct
@@ -30,7 +31,7 @@ return ( // Render react node based on value
 );
 }
 
-function Header() {
+function Header(props: Props) {
     const [value, setValue] = React.useState(0); // Set initial value
     const handleChange = (event: React.SyntheticEvent, newValue: number) => { // Handle callback
         setValue(newValue);
@@ -44,7 +45,7 @@ function Header() {
                     style={ImageStyle}
                 ></img>
             </div>
-            <AppBar position="BOTTOM" sx={{height: 50, background: "#b4b4b4"}}>
+            <AppBar position="sticky" sx={{height: 50, background: "#b4b4b4"}}>
                 <Toolbar sx={{borderColor: 'divider'}}>
                     <Tabs value={value} onChange={handleChange} textColor={"#212121"} sx={{
                             '& .MuiTabs-indicator': { backgroundColor: "#212121" },
@@ -68,9 +69,7 @@ function Header() {
                 </Box>
             </TabPanel>
             <TabPanel value={value} index={2}>
-                <Box sx={{ width: "100%", pt: 2, pl: 2 }}>
-                    <Typography> Grete POWPOW </Typography>
-                </Box>
+                <Algorithm/>
             </TabPanel>
             <TabPanel value={value} index={3}>
                 <Box sx={{ width: "100%", pt: 2, pl: 2 }}>
