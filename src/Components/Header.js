@@ -5,6 +5,7 @@ import { AppBar, Tab, Tabs, Toolbar, Typography, Box } from "@mui/material";
 import About from "./About";
 import Scenario from "./Scenario";
 import Algorithm from "./Algorithm";
+import Simulation from "./Simulation";
 
 import '../css/Header.css'
 import logo from '../img/equinor_logo.jpg'
@@ -64,9 +65,7 @@ function Header(props: Props) {
                 <Scenario/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                <Box sx={{ width: "100%", pt: 2, pl: 2 }}>
-                <Typography> Marie Eline </Typography>
-                </Box>
+                <Simulation />
             </TabPanel>
             <TabPanel value={value} index={2}>
                 <Algorithm/>
